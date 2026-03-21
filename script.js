@@ -2,7 +2,8 @@ const jokeText = document.querySelector('#joke');
 const button = document.querySelector('#joke-btn');
 const errorText = document.querySelector('#error');
 
-button.addEventListener('click', async () => {
+if (button) {
+ button.addEventListener('click', async () => {
   button.textContent = 'Loading...';
   button.disabled = true;
   errorText.textContent = '';
@@ -27,3 +28,4 @@ button.addEventListener('click', async () => {
     button.disabled = false;
   }
 });
+}

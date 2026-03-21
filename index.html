@@ -5,12 +5,33 @@
     <title>My First Site</title>
     <link rel="stylesheet" href="style.css">
   </head>
-  <body>
-  <div class="card">
-    <h1>Random Joke</h1>
-    <p id="joke">Press the button to load a joke...</p>
-    <button id="joke-btn">Get a joke</button>
-    <p id="error"></p>
+ <body>
+  <div class="layout">
+
+    <header class="header">
+      <div class="header-inner">
+        <span class="header-emoji">😄</span>
+        <div>
+          <h1>Joke Machine</h1>
+          <p class="header-sub">A new dad joke every click</p>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="card">
+        <div class="joke-wrap">
+          <p id="joke">Press the button below to load your first joke...</p>
+        </div>
+        <button id="joke-btn">Get a joke</button>
+        <p id="error"></p>
+      </div>
+    </main>
+
+    <footer class="footer">
+      Built with Node.js &amp; vanilla JS &mdash; running locally
+    </footer>
+
   </div>
   <script src="script.js"></script>
 </body>
