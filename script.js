@@ -3,7 +3,13 @@ const button = document.querySelector('#joke-btn');
 const errorText = document.querySelector('#error');
 const counter = document.querySelector('#counter');
 
-let jokeCount = 0;
+// Load saved count from localStorage, default to 0 if nothing saved yet
+let jokeCount = parseInt(localStorage.getItem('jokeCount')) || 0;
+
+// Show the saved count straight away on page load
+if (counter) {
+  counter.textContent = `${jokeCount} joke${jokeCount === 1 ? '' : 's'} loaded all time`;
+}
 
 if (button) {
   button.addEventListener('click', async () => {
@@ -23,7 +29,10 @@ if (button) {
       const data = await response.json();
       jokeText.textContent = data.joke;
       jokeCount = jokeCount + 1;
-      counter.textContent = `${jokeCount} joke${jokeCount === 1 ? '' : 's'} loaded this session`;
+
+      // Save updated count to localStorage
+      localStorage.setItem('jokeCount', jokeCount);
+      counter.textContent = `${jokeCount} joke${jokeCount === 1 ? '' : 's'} loaded all time`;
 
     } catch (error) {
       errorText.textContent = 'Something went wrong — please try again.';
