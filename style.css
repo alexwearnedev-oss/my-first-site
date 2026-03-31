@@ -143,3 +143,94 @@ body {
   font-size: 13px;
   color: #9ca3af;
 }
+
+.content-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  max-width: 560px;
+}
+
+.card-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.save-btn {
+  background: white;
+  color: #4f46e5;
+  border: 2px solid #4f46e5;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.save-btn:hover {
+  background: #4f46e5;
+  color: white;
+}
+
+.favourites {
+  background: white;
+  border-radius: 20px;
+  padding: 32px;
+  width: 100%;
+  box-shadow: 0 8px 40px rgba(79, 70, 229, 0.12);
+}
+
+.favourites h2 {
+  font-size: 18px;
+  color: #374151;
+  margin-bottom: 16px;
+}
+
+.favourites ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.favourite-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  background: #f8f7ff;
+  border-radius: 10px;
+  padding: 14px 16px;
+  border-left: 4px solid #4f46e5;
+}
+
+.favourite-item p {
+  font-size: 15px;
+  color: #374151;
+  line-height: 1.5;
+  flex: 1;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  color: #9ca3af;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 0 4px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.remove-btn:hover {
+  color: #dc2626;
+}
+
+.empty-state {
+  color: #9ca3af;
+  font-size: 14px;
+}

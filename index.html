@@ -2,36 +2,50 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>My First Site</title>
+    <title>Joke Machine</title>
     <link rel="stylesheet" href="style.css">
   </head>
- <body>
-  <div class="layout">
+  <body>
+    <div class="layout">
 
-    <header class="header">
-      <div class="header-inner">
-        <span class="header-emoji">😄</span>
-        <div>
-          <h1>Joke Machine</h1>
-          <p class="header-sub">A new dad joke every click</p>
+      <header class="header">
+        <div class="header-inner">
+          <span class="header-emoji">😄</span>
+          <div>
+            <h1>Joke Machine</h1>
+            <p class="header-sub">A new dad joke every click</p>
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
 
-    <main class="main">
-     <div class="card">
-        <p id="joke">Press the button below to load your first joke...</p>
-        <p id="counter" class="counter">0 jokes loaded this session</p>
-        <button id="joke-btn">Get a joke</button>
-        <p id="error"></p>
-      </div>
-    </main>
+      <main class="main">
+        <div class="content-wrap">
 
-    <footer class="footer">
-      Built with Node.js &amp; vanilla JS &mdash; running locally
-    </footer>
+          <div class="card">
+            <div class="joke-wrap">
+              <p id="joke">Press the button below to load your first joke...</p>
+            </div>
+            <div class="card-actions">
+              <button id="joke-btn">Get a joke</button>
+              <button id="save-btn" class="save-btn" style="display:none">Save joke</button>
+            </div>
+            <p id="counter" class="counter">0 jokes loaded all time</p>
+            <p id="error"></p>
+          </div>
 
-  </div>
-  <script src="script.js"></script>
-</body>
+          <div class="favourites" id="favourites-section">
+            <h2>Saved jokes</h2>
+            <ul id="favourites-list"></ul>
+          </div>
+
+        </div>
+      </main>
+
+      <footer class="footer">
+        Built with Node.js &amp; vanilla JS &mdash; running locally
+      </footer>
+
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
