@@ -119,6 +119,13 @@ body {
   transform: none;
 }
 
+/* ── Counter ── */
+.counter {
+  font-size: 13px;
+  color: #9ca3af;
+  letter-spacing: 0.3px;
+}
+
 /* ── Error ── */
 #error {
   color: #dc2626;
